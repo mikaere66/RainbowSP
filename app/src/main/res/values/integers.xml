@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="drops_per_second">75</integer>
+
+    <integer name="droptime_duration">2000</integer>
+
+    <!-- LinearLayout.java
+         public static final int HORIZONTAL = 0;
+         public static final int VERTICAL = 1; -->
+    <integer name="toggle_buttons_orientation">0</integer>
+
+</resources>

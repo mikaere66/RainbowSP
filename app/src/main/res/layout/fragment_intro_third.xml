@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="introActivity"
+            type="com.michaelrmossman.kotlin.rainbows.activities.IntroActivity" />
+        <variable
+            name="thirdFragment"
+            type="com.michaelrmossman.kotlin.rainbows.fragments.ThirdFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/intro_3_root_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="@dimen/fragment_horizontal_padding"
+        android:paddingStart="@dimen/fragment_horizontal_padding"
+        android:paddingTop="@dimen/fragment_vertical_padding"
+        tools:context=".fragments.ThirdFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/intro_3_image"
+            android:layout_width="@dimen/intro_image_width_height"
+            android:layout_height="@dimen/intro_image_width_height"
+            android:contentDescription="@string/intro_3_content_description"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@id/intro_3_text_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/intro_3_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/intro_3_text_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/intro_text_margin"
+            android:layout_marginStart="@dimen/intro_text_margin"
+            android:text="@string/intro_3_text_1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/intro_3_image"
+            app:layout_constraintTop_toTopOf="@id/intro_3_image"
+            style="@style/Theme.Rainbows.GravityStart" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/intro_3_text_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/intro_text_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/intro_3_image"
+            app:layout_constraintTop_toBottomOf="@id/intro_3_text_1"
+            style="@style/Theme.Rainbows.GravityStart"
+            tools:text="@string/intro_3_text_2" />
+
+        <ScrollView
+            android:id="@+id/intro_3_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/intro_scroll_view_margin"
+            android:layout_marginTop="@dimen/intro_scroll_view_margin"
+            app:layout_constraintBottom_toTopOf="@id/intro_3_skip_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_3_image">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/intro_3_inner_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/intro_3_text_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/intro_text_margin"
+                    android:drawablePadding="@dimen/intro_drawable_padding"
+                    android:drawableStart="@drawable/baseline_home_24"
+                    android:text="@string/intro_3_text_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/Theme.Rainbows.GravityStart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/intro_3_text_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/intro_text_margin"
+                    android:drawablePadding="@dimen/intro_drawable_padding"
+                    android:drawableStart="@drawable/baseline_system_security_update_warning_24"
+                    android:text="@string/intro_3_text_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/intro_3_text_3"
+                    style="@style/Theme.Rainbows.GravityStart" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/intro_3_skip_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/intro_button_margin"
+            android:onClick="@{ () -> introActivity.finishWithResult() }"
+            android:text="@string/intro_skip_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="?attr/materialButtonOutlinedStyle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/intro_3_next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/intro_button_margin"
+            android:onClick="@{ () -> thirdFragment.goNext() }"
+            android:text="@string/intro_next_button"
+            app:layout_constraintBottom_toBottomOf="@id/intro_3_skip_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/intro_3_skip_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

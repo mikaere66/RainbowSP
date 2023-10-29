@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="introActivity"
+            type="com.michaelrmossman.kotlin.rainbows.activities.IntroActivity" />
+        <variable
+            name="fourthFragment"
+            type="com.michaelrmossman.kotlin.rainbows.fragments.FourthFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/intro_4_root_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/fragment_vertical_padding"
+        tools:context=".fragments.FourthFragment">
+        <!-- Horizontal padding for this fragment is applied
+             to just two individual textViews ... see below.
+             Note also that finish button has weird margins! -->
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/intro_4_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="intro_4_text_5,intro_4_finish_button" />
+
+        <ScrollView
+            android:id="@+id/intro_4_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/intro_scroll_view_margin"
+            app:layout_constraintBottom_toTopOf="@id/intro_4_barrier"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/intro_4_inner_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/intro_4_image"
+                    android:layout_width="@dimen/intro_image_width_height"
+                    android:layout_height="@dimen/intro_image_width_height"
+                    android:contentDescription="@string/intro_4_content_description"
+                    android:scaleType="fitXY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/intro_4_image" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/intro_4_text_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/intro_text_margin"
+                    android:layout_marginStart="@dimen/intro_text_margin"
+                    android:text="@string/intro_4_text_1"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/intro_4_image"
+                    app:layout_constraintTop_toTopOf="@id/intro_4_image"
+                    style="@style/Theme.Rainbows.GravityStart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/intro_4_text_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/intro_text_margin"
+                    android:layout_marginStart="@dimen/intro_text_margin"
+                    android:layout_marginTop="@dimen/intro_text_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/intro_4_image"
+                    app:layout_constraintTop_toBottomOf="@id/intro_4_text_1"
+                    style="@style/Theme.Rainbows.GravityStart"
+                    tools:text="@string/intro_4_text_2"
+                    tools:ignore="VisualLintLongText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/intro_4_text_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/fragment_horizontal_padding"
+                android:paddingStart="@dimen/fragment_horizontal_padding"
+                    android:drawablePadding="@dimen/intro_drawable_padding"
+                    android:drawableStart="@drawable/baseline_code_24"
+                    android:layout_marginTop="@dimen/intro_text_margin"
+                    android:text="@string/intro_4_text_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/intro_4_image"
+                    style="@style/Theme.Rainbows.GravityStart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/intro_4_text_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/fragment_horizontal_padding"
+                android:paddingStart="@dimen/fragment_horizontal_padding"
+                    android:layout_marginBottom="@dimen/intro_text_margin"
+                    android:layout_marginTop="@dimen/intro_text_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/intro_4_text_3"
+                    style="@style/Theme.Rainbows.GravityStart"
+                    tools:text="@string/intro_4_text_4"
+                    tools:ignore="VisualLintLongText" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/scroll_up_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/intro_fab_vertical_margin"
+                    android:layout_marginEnd="@dimen/intro_fab_horizontal_margin"
+                    android:contentDescription="@string/intro_fab_up_content_description"
+                    android:onClick="@{ () -> fourthFragment.scrollUp() }"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/baseline_vertical_align_top_24" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/scroll_down_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/intro_fab_vertical_margin"
+            android:layout_marginEnd="@dimen/intro_fab_horizontal_margin"
+            android:contentDescription="@string/intro_fab_down_content_description"
+            android:onClick="@{ () -> fourthFragment.scrollDown() }"
+            app:layout_constraintBottom_toBottomOf="@id/intro_4_scroll_view"
+            app:layout_constraintEnd_toEndOf="@id/intro_4_scroll_view"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/baseline_vertical_align_bottom_24"
+            tools:ignore="ImageContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/intro_4_text_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/intro_text_margin"
+            android:layout_marginStart="@dimen/intro_text_margin"
+            android:drawablePadding="@dimen/intro_drawable_padding"
+            android:drawableStart="@drawable/baseline_tips_and_updates_24"
+            android:text="@string/intro_4_text_5"
+            app:layout_constraintBottom_toBottomOf="@id/intro_4_finish_button"
+            app:layout_constraintEnd_toStartOf="@id/intro_4_finish_button"
+            app:layout_constraintTop_toTopOf="@id/intro_4_finish_button"
+            style="@style/Theme.Rainbows.GravityEnd" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/intro_4_finish_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/intro_finish_margin"
+            android:onClick="@{ () -> introActivity.finishWithResult() }"
+            android:text="@string/intro_finish_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

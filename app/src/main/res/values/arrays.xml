@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="rainbow_icons">
+        <item>@drawable/rain_umbrella_dynamic</item>
+        <item>@drawable/baseline_local_bar_dynamic</item>
+        <item>@drawable/baseline_local_car_wash_dynamic</item>
+        <item>@drawable/baseline_brush_dynamic</item>
+    </integer-array>
+
+    <string-array name="rainbow_messages">
+        <item>@string/text_rain</item>
+        <item>@string/text_dance</item>
+        <item>@string/text_cops</item>
+        <item>@string/text_rgb</item>
+    </string-array>
+
+</resources>

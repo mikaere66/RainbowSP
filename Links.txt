@@ -1,0 +1,14 @@
+
+https://ray-chong.medium.com/android-emulator-detection-4d0f994aab5e
+
+https://github.com/Stericson/RootTools/wiki/Usage
+
+https://stackoverflow.com/questions/15253535/multiple-select-statements-in-one-query-in-sqlite
+
+https://www.tutorialspoint.com/how-can-i-get-a-random-number-in-kotlin
+
+https://manavtamboli.medium.com/reusability-in-android-fragment-with-data-binding-60fdc1721da
+
+https://stackoverflow.com/questions/27477371/android-elevation-not-showing-a-shadow
+
+https://medium.com/over-engineering/hands-on-with-material-components-for-android-buttons-76fa1a92ec0a

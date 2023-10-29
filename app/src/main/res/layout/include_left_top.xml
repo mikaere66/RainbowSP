@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sliders_constraint_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/switch_rain_guideline"/>
+
+        <!-- Delay Slider -->
+
+        <TextView
+            android:id="@+id/delay_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/delay_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            tools:text="@string/delay_text" /><!-- Note chainStyle -->
+
+        <TextView
+            android:id="@+id/delay_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:text="@string/delay_from"
+            app:layout_constraintBottom_toBottomOf="@id/delay_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/delay_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/delay_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:contentDescription="@string/delay_descr"
+            android:enabled="false"
+            android:stepSize="@string/delay_step"
+            android:valueFrom="@string/delay_from"
+            android:valueTo="@string/delay_to"
+            app:layout_constraintBottom_toTopOf="@id/brightness_text"
+            app:layout_constraintEnd_toStartOf="@id/delay_max"
+            app:layout_constraintStart_toEndOf="@id/delay_min"
+            app:layout_constraintTop_toBottomOf="@id/delay_text"
+            tools:value="@string/delay_mean" />
+
+        <TextView
+            android:id="@+id/delay_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:text="@string/delay_to"
+            app:layout_constraintBottom_toBottomOf="@id/delay_slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/delay_slider" />
+
+        <!-- LED Brightness -->
+
+        <TextView
+            android:id="@+id/brightness_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/led_current_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/delay_slider"
+            tools:text="@string/brightness_text" />
+
+        <TextView
+            android:id="@+id/brightness_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:text="@string/brightness_from"
+            app:layout_constraintBottom_toBottomOf="@id/led_current_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/led_current_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/led_current_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:contentDescription="@string/brightness_descr"
+            android:enabled="false"
+            android:stepSize="@string/brightness_step"
+            android:valueFrom="@string/brightness_from"
+            android:valueTo="@string/brightness_to"
+            app:layout_constraintBottom_toTopOf="@id/cycle_text"
+            app:layout_constraintEnd_toStartOf="@id/brightness_max"
+            app:layout_constraintStart_toEndOf="@id/brightness_min"
+            app:layout_constraintTop_toBottomOf="@id/brightness_text"
+            tools:value="@string/brightness_mean" />
+
+        <TextView
+            android:id="@+id/brightness_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:text="@string/brightness_to"
+            app:layout_constraintBottom_toBottomOf="@id/led_current_slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/led_current_slider" />
+
+        <!-- Cycle Slider -->
+
+        <TextView
+            android:id="@+id/cycle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/cycle_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/led_current_slider"
+            tools:text="@string/cycle_text" />
+
+        <TextView
+            android:id="@+id/cycle_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:text="@string/cycle_from"
+            app:layout_constraintBottom_toBottomOf="@id/cycle_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cycle_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/cycle_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:contentDescription="@string/cycle_descr"
+            android:enabled="false"
+            android:stepSize="@string/cycle_step"
+            android:valueFrom="@string/cycle_from"
+            android:valueTo="@string/cycle_to"
+            app:layout_constraintBottom_toTopOf="@id/switch_rain"
+            app:layout_constraintEnd_toStartOf="@id/cycle_max"
+            app:layout_constraintStart_toEndOf="@id/cycle_min"
+            app:layout_constraintTop_toBottomOf="@id/cycle_text"
+            tools:value="@string/cycle_mean" />
+
+        <TextView
+            android:id="@+id/cycle_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/slider_horizontal_margin"
+            android:layout_marginStart="@dimen/slider_horizontal_margin"
+            android:text="@string/cycle_to"
+            app:layout_constraintBottom_toBottomOf="@id/cycle_slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cycle_slider" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_rain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            tools:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guideline"
+            app:layout_constraintTop_toBottomOf="@id/cycle_slider"
+            app:switchPadding="@dimen/switch_rain_padding"
+            style="@style/Theme.Rainbows.MaterialSwitch"
+            tools:checked="false"
+            tools:enabled="true"
+            tools:ignore="TextContrastCheck"
+            tools:text="@string/text_rain" /><!-- -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

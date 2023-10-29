@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttons_constraint_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Effect Selection -->
+
+        <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+            android:id="@+id/toggle_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="@integer/toggle_buttons_orientation"
+            app:layout_constraintBottom_toTopOf="@id/switch_lights"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:tbgFlow="true"><!-- Note chainStyle -->
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/effect_button_one"
+                android:layout_width="@dimen/effect_button_width"
+                android:layout_height="@dimen/effect_button_height"
+                android:enabled="false"
+                android:text="@string/effect_one_text"
+                style="?attr/materialButtonOutlinedStyle" />
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/effect_button_two"
+                android:layout_width="@dimen/effect_button_width"
+                android:layout_height="@dimen/effect_button_height"
+                android:enabled="false"
+                android:text="@string/effect_two_text"
+                style="?attr/materialButtonOutlinedStyle" />
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/effect_button_three"
+                android:layout_width="@dimen/effect_button_width"
+                android:layout_height="@dimen/effect_button_height"
+                android:enabled="false"
+                android:text="@string/effect_three_text"
+                style="?attr/materialButtonOutlinedStyle" />
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/effect_button_four"
+                android:layout_width="@dimen/effect_button_width"
+                android:layout_height="@dimen/effect_button_height"
+                android:enabled="false"
+                android:text="@string/effect_four_text"
+                style="?attr/materialButtonOutlinedStyle" />
+        </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+        <!-- Switches -->
+
+        <com.ngallazzi.highlightingview.HighlightingView
+            android:id="@+id/switch_lights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/switch_lights_elevation"
+            android:outlineProvider="paddedBounds"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toggle_effect"
+            app:bottomText="@string/highlight_bottom_text"
+            app:bottomTextColor="@color/switch_lights_bottom_text_color"
+            app:highlightedBottomText="@string/highlight_active_text"
+            app:highlightedBackgroundColor="@color/highlight_color"
+            app:highlightedIcon="@drawable/baseline_offline_bolt_24"
+            app:idleBackgroundColor="@color/idle_color"
+            app:idleIcon="@drawable/outline_offline_bolt_24"
+            app:middleText="@string/highlight_middle_text"
+            app:middleTextColor="@color/switch_lights_middle_text_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

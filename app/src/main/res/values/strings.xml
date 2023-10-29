@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY appName "Rainbows">
+]><resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">&appName;</string>
+    <string name="app_subtitle">for %s</string>
+
+    <string name="action_cancelled">Action cancelled</string>
+
+    <string name="brightness_text">LED brightness: %.0f\%%</string>
+    <string name="brightness_descr">Set desired brightness</string>
+
+    <!-- Slider values must be equal to valueFrom.plus(multiples of stepSize) -->
+    <string name="brightness_from">30</string>
+    <string name="brightness_step">10</string>
+     <string name="brightness_to">100</string>
+    <string name="brightness_mean">50</string>
+
+    <!-- Trailing char is non-breaking space -->
+    <string name="bullet_point">•\u00A0</string>
+
+         <string name="cycle_text">Repeat cycles: x %.0f</string>
+    <string name="cycle_descr">Set desired repeat count</string>
+
+    <string name="cycle_from">1</string>
+    <string name="cycle_step">1</string>
+     <string name="cycle_to">10</string>
+    <string name="cycle_mean">3</string>
+
+         <string name="delay_text">Delay (in millis): %.0f</string>
+    <string name="delay_descr">Set desired speed</string>
+
+    <string name="delay_from">600</string>
+     <string name="delay_step">50</string>
+     <string name="delay_to">1000</string>
+    <string name="delay_mean">750</string>
+
+      <string name="device_error">Not an Xperia SP &#8230; cannot continue!</string>
+    <string name="device_unknown">A foreign device &#8230; cannot continue!</string>
+     <string name="error_no_root">No rooted device &#8230; cannot continue!</string>
+
+      <string name="effect_one_text">Rainbow</string>
+      <string name="effect_two_text">Dance</string>
+    <string name="effect_three_text">Police</string>
+     <string name="effect_four_text">RGB</string>
+
+    <string name="menu_reset">Reset to Defaults</string>
+    <string name="menu_intro">Replay Introduction</string>
+
+    <string name="highlight_middle_text">Rainbow LEDs</string>
+    <string name="highlight_bottom_text">Hit It!</string>
+
+         <string name="highlight_starts_text">Starting &#8230;</string>
+    <string name="highlight_active_text">\u00A0Running &#8230;</string>
+
+    <string name="intro_subtitle">Introduction (%1$d of %2$d)</string>
+
+    <string name="intro_1_content_description">Rainbow logo</string>
+    <string name="intro_1_text_1">Welcome to the &appName; app, designed by an Xperia
+        SP fan just as a bit of fun, and to share with other Sony Xperia fans.</string>
+    <string name="intro_1_text_2"><![CDATA[Firstly, and most importantly, <B>this app requires root
+        access</B>. If your phone is not rooted, then this app will simply do nothing!]]></string>
+    <string name="intro_1_text_3"><![CDATA[Secondly, it was designed to <B>run only on the Sony
+        Xperia SP</B>. Although there are <I>other</I> models that support lighting effects, like
+        the Xperia U, they have a very different way of turning those lights on &amp; off! Again,
+        if your phone is <I>not</I> an Xperia SP, then this app will simply do nothing!]]></string>
+    <string name="intro_1_text_4">If all is well after returning from this intro,
+        wait a few seconds &amp; you should be prompted for root acccess.</string>
+
+    <string name="intro_2_content_description">Settings logo</string>
+    <string name="intro_2_text_1">How It Works</string>
+    <string name="intro_2_text_2"><![CDATA[The rainbow &amp; dance sequences are based on a bash script originally
+    <A HREF="https://tinyurl.com/XDA-Developers">shared on XDA-Developers forum by nixx-X1</A> way back in 2013.]]></string>
+    <string name="intro_2_text_3">Basically, the individual commands from that script are stored here
+        in a database, then called on in a variety of ways, depending on the chosen effect.</string>
+    <string name="intro_2_text_4">The sliders and buttons on the main screen are pretty self-explanatory.</string>
+    <string name="intro_2_text_5">Try different variations to find out which you prefer =)</string>
+    <string name="intro_2_text_6"><![CDATA[Be aware that any <I>other</I> app or
+        system process that has control over the lights may override this app
+        &#8230; it\'s basically a last in/first out situation.]]></string>
+
+    <string name="intro_3_content_description">Tips logo</string>
+    <string name="intro_3_text_1">Tips &amp; Tricks</string>
+    <string name="intro_3_text_2"><![CDATA[The lights will continue to run <I>even
+        when the app is in the background</I>, or the screen is off.]]></string>
+    <string name="intro_3_text_3">But don\'t just hit the Back button to go to another
+        app, as that will shut everything down &amp; quit &#8230; instead, you would
+        need to use the Home or Recents buttons to switch to another app.</string>
+    <string name="intro_3_text_4">Sometimes the RootTools API gets overwhelmed &amp; just
+        stops processing commands! If this does happen, just turn off the lights &amp;
+        restart the app. In severe cases, you may need to restart your phone.</string>
+
+    <string name="intro_4_content_description">Tools logo</string>
+    <string name="intro_fab_up_content_description">Scroll up</string>
+    <string name="intro_fab_down_content_description">Scroll down</string>
+    <string name="intro_4_text_1">APIs/Credits</string>
+    <string name="intro_4_text_2"><![CDATA[Many thanks to the great number of
+        individual Android developers <B>as well as</B> companies who share their
+        software libraries and APIs for use in projects just like this.]]></string>
+    <string name="intro_4_text_3">Starting with libraries shared by individual developers:</string>
+    <string name="intro_4_text_4" tools:ignore="TypographyEllipsis"><![CDATA[
+        <B>Third party libraries</B>:
+        <BR><BR>
+        <UL>
+        <LI> &nbsp; <A HREF="https://android-arsenal.com/details/1/2663">AndroidDeviceNames</A>
+        <BR><BR>
+        <LI> &nbsp; <A HREF="https://android-arsenal.com/details/1/6589">Binary-Finary FabToast</A>
+        <BR><BR>
+        <LI> &nbsp;            <A HREF="https://github.com/coil-kt/coil">Coil Image Loading</A>
+        <BR><BR>
+        <LI> &nbsp; <A HREF="https://android-arsenal.com/details/1/7294">HighlightingView</A>
+        <BR><BR>
+        <LI> &nbsp; <A HREF="https://android-arsenal.com/details/1/7864">RainLayoutView</A>
+        <BR><BR>
+        <LI> &nbsp; <A HREF="https://android-arsenal.com/details/1/8352">SegmentedProgressBar</A>
+        <BR><BR>
+        <LI> &nbsp;     <A HREF="https://github.com/Stericson/RootTools">Stericson/RootTools</A>
+        <BR><BR>
+        <LI> &nbsp; <A HREF="https://github.com/nex3z/ToggleButtonGroup">ToggleButtonGroup</A>
+        </UL>
+        <BR>
+        <B>Android/Google libraries</B>:
+        <UL>
+        <LI> &nbsp; Activity Extensions
+        <LI> &nbsp; AndroidX Core
+        <LI> &nbsp; AppCompat Compatibility
+        <LI> &nbsp; ConstraintLayout
+        <LI> &nbsp; Dagger/Hilt Dependency Injection
+        <LI> &nbsp; Fragment Extensions
+        <LI> &nbsp; JetPack Compose
+        <LI> &nbsp; Kotlinx Coroutines
+        <LI> &nbsp; Lifecycle+Extensions
+        <LI> &nbsp; Material Design
+        <LI> &nbsp; Room Database+Extensions
+        </UL>]]>
+    </string>
+    <string name="intro_4_text_5">Tip: to see this intro again,\n
+                                       refer to the main menu</string><!-- See also values-land -->
+
+    <string name="intro_skip_button">Skip Intro</string>
+    <string name="intro_next_button">Next Slide</string>
+    <string name="intro_finish_button">Finish</string>
+
+    <string name="reset_confirm">This action will reset
+        all selections to their default values &amp;
+        restart the app &#8230; continue?</string>
+    <string name="reset_done">App reset to defaults</string>
+    <string name="reset_none">Nothing to do!</string>
+
+     <string name="text_rain">Add some Rain</string>
+    <string name="text_dance">Add some Wine</string>
+     <string name="text_cops">Add some Five 0</string>
+      <string name="text_rgb">Add some Paint</string>
+
+</resources>

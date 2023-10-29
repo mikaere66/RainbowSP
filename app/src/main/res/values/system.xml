@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+     <string
+         name="sys_path_brightness"
+         tools:ignore="TypographyDashes">/sys/devices/i2c-10/10-0047/leds/LED%1$d_%2$s/brightness</string>
+    <string
+         name="sys_path_led_current"
+         tools:ignore="TypographyDashes">/sys/devices/i2c-10/10-0047/leds/LED%1$d_%2$s/led_current</string>
+
+</resources>

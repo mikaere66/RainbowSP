@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="drop_src_width_height">30dp</dimen>
+
+    <dimen name="effect_button_width">130dp</dimen>
+    <dimen name="effect_button_height">45dp</dimen>
+
+    <dimen name="fragment_horizontal_padding">16dp</dimen>
+    <dimen name="fragment_vertical_padding">16dp</dimen>
+
+    <dimen name="intro_button_margin">16dp</dimen>
+    <dimen name="intro_drawable_padding">8dp</dimen>
+    <dimen name="intro_fab_horizontal_margin">14dp</dimen>
+    <dimen name="intro_fab_vertical_margin">8dp</dimen>
+    <dimen name="intro_finish_margin">32dp</dimen>
+    <dimen name="intro_image_width_height">160dp</dimen>
+    <dimen name="intro_scroll_view_margin">4dp</dimen>
+    <dimen name="intro_text_margin">12dp</dimen>
+
+    <dimen name="progress_view_height">8dp</dimen>
+
+    <dimen name="slider_horizontal_margin">4dp</dimen>
+
+    <dimen name="switch_lights_elevation">4.5dp</dimen>
+
+    <dimen name="switch_rain_padding">8dp</dimen>
+
+</resources>

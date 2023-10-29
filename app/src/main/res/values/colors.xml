@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="default_text_color">#808080</color><!-- Android's Default Text -->
+
+    <color name="highlight_color">#66C547</color>
+
+    <color name="icon_enabled_color">?attr/colorControlNormal</color>
+    <color name="icon_disabled_color">#FF9E9E9E</color>
+
+    <color name="idle_color">#EEEEEE</color>
+
+    <color name="switch_lights_bottom_text_color">@android:color/black</color>
+    <color name="switch_lights_middle_text_color">@android:color/black</color>
+
+</resources>

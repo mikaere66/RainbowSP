@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"><!-- See also layout-land -->
+
+    <data>
+
+    </data>
+
+    <com.fevziomurtekin.widget.RainLayoutView
+        android:id="@+id/rain_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:dropPerSecond="@integer/drops_per_second"
+        app:durationOfDropTime="@integer/droptime_duration"
+        app:isColorful="true"
+        tools:context=".MainActivity"><!--
+        Note different heights for each of the includes ...
+        Bottom margin is specified toward EOF ... see below -->
+
+        <include
+            android:id="@+id/sliders_layout"
+            layout="@layout/include_left_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/buttons_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/buttons_layout"
+            layout="@layout/include_right_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:layout_constraintBottom_toTopOf="@id/segmented_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sliders_layout" />
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/segmented_progress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_view_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttons_layout" />
+
+    </com.fevziomurtekin.widget.RainLayoutView>
+
+</layout>
