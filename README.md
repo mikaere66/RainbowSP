@@ -6,6 +6,6 @@ Secondly, it was designed to **run only on the Sony Xperia SP**. Although there 
 
 **How it works**:
 
-The rainbow and dance sequences are based on a bash script originally [shared on XDA-Developers forum by nixx-X1](https://tinyurl.com/XDA-Developers){:target="_blank" rel="noopener"} way back in 2013.
+The rainbow and dance sequences are based on a bash script originally [shared on XDA-Developers forum by nixx-X1](https://tinyurl.com/XDA-Developers){:target="_blank"} way back in 2013.
 
 Basically, the individual commands from that script are stored here in a database, then called upon in a variety of ways, depending on the chosen effect.
